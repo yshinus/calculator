@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자작 계산기</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="calcStyle.css"; rel=StyleSheet>
+</head>
+<body>
+    <div id="warnbox">주의! 큰 수의 계산결과가 정확하지 않을 수 있습니다.</div>
+    <div id="background">
+        <div id="lastTextbox"></div>
+        <div id="textbox"></div>   
+        <div id="history">
+            <div class="historyContents"; id="c1"></div>
+            <div class="historyContents"; id="c2"></div>
+            <div class="historyContents"; id="c3"></div>
+            <div class="historyContents"; id="c4"></div>
+            <div class="historyContents"; id="c5"></div>
+            <div class="historyContents"; id="c6"></div>
+            <div class="historyContents"; id="c7"></div>
+            <div class="historyContents"; id="c8"></div>
+            <div class="historyContents"; id="c9"></div>
+        </div>
+        
+        <div id="clock"; onclick="window.open('https://yshinus.github.io/digitalClock/')"></div> <button id="backspace"; onclick="deleteLast()";>←</button>
+        <button id="deleteButton"; onclick="deleteAll()">c</button>
+        <button class="upButton"; id="power"; value="^"; onclick="writeSymbol(this.id)">xⁿ</button>
+        <button class="upButton"; onclick="makePercent()">%</button>
+        <button id="divide"; value="÷"; class="symbolButton"; onclick="writeSymbol(this.id)">÷</button>
+
+        <button id="n7"; class="numberButton" value="7"; onclick="buttonNumber(this.id)">7</button>
+        <button id="n8"; class="numberButton"; value="8"; onclick="buttonNumber(this.id)">8</button>
+        <button id="n9"; class="numberButton"; value="9"; onclick="buttonNumber(this.id)">9</button>
+        <button id="multiply"; class="symbolButton"; value="×"; onclick="writeSymbol(this.id)">×</button>
+
+        <button id="n4"; class="numberButton"; value="4"; onclick="buttonNumber(this.id)">4</button>
+        <button id="n5"; class="numberButton"; value="5"; onclick="buttonNumber(this.id)">5</button>
+        <button id="n6"; class="numberButton"; value="6"; onclick="buttonNumber(this.id)">6</button>
+        <button id="minus"; class="symbolButton"; value="－"; onclick="writeSymbol(this.id)">－</button>
+
+        <button id="n1"; class="numberButton"; value="1"; onclick="buttonNumber(this.id)">1</button>
+        <button id="n2"; class="numberButton"; value="2"; onclick="buttonNumber(this.id)">2</button>
+        <button id="n3"; class="numberButton"; value="3"; onclick="buttonNumber(this.id)">3</button>
+        <button id="plus"; class="symbolButton"; value="+"; onclick="writeSymbol(this.id)">+</button>
+
+        <button class="numberButton"; onclick="addMinus()">+/－</button>
+        <button id="n0"; class="numberButton"; value="0"; onclick="buttonNumber(this.id)">0</button>
+        <button class="numberButton"; onclick="addDot()">.</button>
+        <button id="equal"; onclick="writeResult()">=</button>
+
+        <script src = "calcScript.js"></script>
+    </div>
+</body>
+</html>
